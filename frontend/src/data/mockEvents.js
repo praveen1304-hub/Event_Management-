@@ -1,0 +1,275 @@
+/**
+ * Mock Events Data
+ * CampusPulse - College Event Countdown & RSVP Tracker
+ * Handles all internal college event types.
+ */
+
+export const eventCategories = [
+  'Workshop',
+  'Paper Presentation',
+  'Coding Event',
+  'Project Presentation',
+  'Seminar',
+  'Technical Event',
+  'Cultural Event',
+  'Sports',
+  'Competition',
+  'Other'
+];
+
+export const initialEvents = [
+  {
+    id: 'evt-101',
+    name: 'Generative AI & LLM Systems Hands-on Workshop',
+    slug: 'generative-ai-llm-workshop',
+    category: 'Workshop',
+    hostId: 'host-1',
+    organizer: 'Coding & AI Club',
+    hostName: 'Alex Rivera',
+    description: 'A comprehensive full-day practical workshop exploring Retrieval-Augmented Generation (RAG), Fine-Tuning open-source LLMs, and building autonomous agentic workflows using Python and modern cloud frameworks. All students will receive hands-on code notebooks and digital certificates.',
+    poster: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800',
+    date: '2026-08-25',
+    startTime: '09:30',
+    endTime: '16:30',
+    venue: 'CS Seminar Hall (Block 3, 2nd Floor)',
+    registrationDeadline: '2026-08-24',
+    capacity: 120,
+    registeredCount: 84,
+    status: 'Upcoming', // 'Upcoming', 'Live', 'Completed', 'Cancelled', 'Draft'
+    rules: [
+      'Bring your college ID card for physical verification at entry.',
+      'Laptops with Python 3.10+ installed are required for coding tracks.',
+      'Pre-registration through CampusPulse is mandatory for seating allotment.',
+      'Entry is strictly on a first-come, first-served basis up to venue capacity.'
+    ],
+    featured: true
+  },
+  {
+    id: 'evt-102',
+    name: 'CodeForge: 24-Hour Campus Hackathon',
+    slug: 'codeforge-24h-hackathon',
+    category: 'Coding Event',
+    hostId: 'host-1',
+    organizer: 'Coding & AI Club',
+    hostName: 'Alex Rivera',
+    description: 'The flagship internal 24-hour campus hackathon! Form teams of 2-4 students to innovate software, IoT, and AI solutions solving real campus and societal challenges. Mentorship, high-speed WiFi, meals, and cash prizes included.',
+    poster: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800',
+    date: '2026-08-28',
+    startTime: '10:00',
+    endTime: '10:00',
+    venue: 'Central Computer Center & Innovation Lab',
+    registrationDeadline: '2026-08-27',
+    capacity: 160,
+    registeredCount: 142,
+    status: 'Upcoming',
+    rules: [
+      'Teams must consist of 2 to 4 registered college students.',
+      'All code must be written during the 24-hour hackathon window.',
+      'Use of open-source libraries and APIs is permitted.',
+      'Final submission includes working GitHub repository and 5-min live demo.'
+    ],
+    featured: true
+  },
+  {
+    id: 'evt-103',
+    name: 'TechnoVision: Research Paper Presentation Symposium',
+    slug: 'technovision-paper-presentation',
+    category: 'Paper Presentation',
+    hostId: 'host-2',
+    organizer: 'Robotics & IoT Society',
+    hostName: 'Dr. Priya Sharma',
+    description: 'Present your novel research, experimental findings, and technical surveys before an esteemed panel of professors and industry mentors. Best papers will receive research grant recommendations and college publication awards.',
+    poster: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800',
+    date: '2026-09-02',
+    startTime: '10:00',
+    endTime: '15:30',
+    venue: 'ECE Conference Auditorium',
+    registrationDeadline: '2026-08-30',
+    capacity: 80,
+    registeredCount: 38,
+    status: 'Upcoming',
+    rules: [
+      'Presentation slides must adhere to IEEE standard 10-slide format.',
+      'Presentation time: 8 minutes talk + 4 minutes Q&A.',
+      'Author and co-author must register individually with roll numbers.',
+      'Formal college attire is mandatory.'
+    ],
+    featured: false
+  },
+  {
+    id: 'evt-104',
+    name: 'RoboWars: Autonomous Rover Navigation Challenge',
+    slug: 'robowars-rover-challenge',
+    category: 'Technical Event',
+    hostId: 'host-2',
+    organizer: 'Robotics & IoT Society',
+    hostName: 'Dr. Priya Sharma',
+    description: 'Design, program, and race your custom micro-rovers through a challenging obstacle arena featuring slope climbs, line tracking, and sensor-based maze navigation.',
+    poster: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800',
+    date: '2026-09-05',
+    startTime: '13:00',
+    endTime: '17:30',
+    venue: 'Open Indoor Sports Complex Arena',
+    registrationDeadline: '2026-09-04',
+    capacity: 60,
+    registeredCount: 45,
+    status: 'Upcoming',
+    rules: [
+      'Rover dimensions must not exceed 30cm x 30cm x 30cm.',
+      'Battery voltage must be strictly under 12V DC.',
+      'Autonomous track completion earns bonus navigation points.',
+      'Safety goggles required in the arena.'
+    ],
+    featured: true
+  },
+  {
+    id: 'evt-105',
+    name: 'Quantum Computing & Post-Quantum Cryptography Seminar',
+    slug: 'quantum-computing-seminar',
+    category: 'Seminar',
+    hostId: 'host-1',
+    organizer: 'Coding & AI Club',
+    hostName: 'Alex Rivera',
+    description: 'Distinguished lecture by guest researchers from National Quantum Labs on Qubits, Superposition, Shor’s algorithm, and lattice-based post-quantum cryptographic security protocols.',
+    poster: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800',
+    date: '2026-09-08',
+    startTime: '11:00',
+    endTime: '13:00',
+    venue: 'Main College Auditorium (Hall 1)',
+    registrationDeadline: '2026-09-07',
+    capacity: 250,
+    registeredCount: 198,
+    status: 'Upcoming',
+    rules: [
+      'Open to students across all engineering and science departments.',
+      'Please arrive 15 minutes prior to start time.',
+      'Mobile phones must be kept in silent mode.'
+    ],
+    featured: false
+  },
+  {
+    id: 'evt-106',
+    name: 'Senior Capstone Project Presentation & Demo Expo',
+    slug: 'senior-capstone-project-expo',
+    category: 'Project Presentation',
+    hostId: 'host-3',
+    organizer: 'SAE Collegiate & Aero Club',
+    hostName: 'Prof. Marcus Vance',
+    description: 'Final year engineering students exhibit their multidisciplinary hardware prototypes, embedded IoT devices, aerodynamic vehicle scale models, and green energy innovations.',
+    poster: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800',
+    date: '2026-09-12',
+    startTime: '09:00',
+    endTime: '16:00',
+    venue: 'Mechanical Workshop Bay & Exhibition Ground',
+    registrationDeadline: '2026-09-10',
+    capacity: 150,
+    registeredCount: 110,
+    status: 'Upcoming',
+    rules: [
+      'Each project stall will be provided with a power outlet and display stand.',
+      'Safety checks on high-current or rotating parts must be approved prior.',
+      'Evaluator scoring rubrics will be shared at 9:00 AM.'
+    ],
+    featured: false
+  },
+  {
+    id: 'evt-107',
+    name: 'Symphony 2026: Annual Inter-Department Cultural Fest',
+    slug: 'symphony-annual-cultural-fest',
+    category: 'Cultural Event',
+    hostId: 'host-4',
+    organizer: 'Fine Arts & Music Society',
+    hostName: 'Ananya Deshmukh',
+    description: 'A vibrant celebration of music, street play drama, fusion dance, instrumental orchestra, and fine arts exhibitions. Celebrate talent and inter-department spirit!',
+    poster: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800',
+    date: '2026-09-18',
+    startTime: '16:00',
+    endTime: '21:00',
+    venue: 'Open Air Amphitheatre',
+    registrationDeadline: '2026-09-17',
+    capacity: 500,
+    registeredCount: 420,
+    status: 'Upcoming',
+    rules: [
+      'Campus entry pass QR is mandatory at security check gates.',
+      'Respect campus decency and discipline guidelines.',
+      'Outside guests are strictly not permitted without special dean pass.'
+    ],
+    featured: true
+  },
+  {
+    id: 'evt-108',
+    name: 'Inter-Department Cricket Premier Tournament',
+    slug: 'inter-department-cricket-tournament',
+    category: 'Sports',
+    hostId: 'host-3',
+    organizer: 'SAE Collegiate & Aero Club',
+    hostName: 'Prof. Marcus Vance',
+    description: 'The annual 10-overs departmental cricket championship! 8 departments battle in a knockout format for the prestigious Rolling Championship Trophy.',
+    poster: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800',
+    date: '2026-09-22',
+    startTime: '08:30',
+    endTime: '17:00',
+    venue: 'Main College Sports Ground (Pitch A)',
+    registrationDeadline: '2026-09-20',
+    capacity: 200,
+    registeredCount: 88,
+    status: 'Upcoming',
+    rules: [
+      'Tournament follows standard ICC 10-over format rules.',
+      'Each department field squad must register team roster sheets.',
+      'Standard cricket white uniforms and safety gear required.'
+    ],
+    featured: false
+  },
+  {
+    id: 'evt-109',
+    name: 'Campus PitchDeck: Student Startup & Innovation Challenge',
+    slug: 'campus-pitchdeck-startup-challenge',
+    category: 'Competition',
+    hostId: 'host-1',
+    organizer: 'Coding & AI Club',
+    hostName: 'Alex Rivera',
+    description: 'Got an innovative business idea or tech venture? Pitch your business model, prototype, and market strategy to seed venture capitalists and angel investors.',
+    poster: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800',
+    date: '2026-09-26',
+    startTime: '10:30',
+    endTime: '15:00',
+    venue: 'Management Studies Auditorium (Block 5)',
+    registrationDeadline: '2026-09-25',
+    capacity: 100,
+    registeredCount: 62,
+    status: 'Upcoming',
+    rules: [
+      'Pitch deck strictly limited to 7 minutes + 5 minutes Q&A.',
+      'Submissions must include problem statement, TAM/SAM, and revenue model.',
+      'Top 3 winning teams receive college incubation seed funding support.'
+    ],
+    featured: false
+  },
+  {
+    id: 'evt-110',
+    name: 'Annual Blood Donation & Wellness Health Camp',
+    slug: 'annual-blood-donation-health-camp',
+    category: 'Other',
+    hostId: 'host-4',
+    organizer: 'Fine Arts & Music Society / NSS Cell',
+    hostName: 'Ananya Deshmukh',
+    description: 'Organized in partnership with the Government District Medical Hospital and Red Cross Society. Free blood pressure, BMI, hemoglobin testing, and safe voluntary blood donation.',
+    poster: 'https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=800',
+    date: '2026-09-30',
+    startTime: '09:00',
+    endTime: '14:00',
+    venue: 'College Medical Center & Recreation Hall',
+    registrationDeadline: '2026-09-29',
+    capacity: 200,
+    registeredCount: 115,
+    status: 'Upcoming',
+    rules: [
+      'Donors must be at least 18 years old and weigh above 45 kg.',
+      'Nutritious refreshments, juice, and donor certificate provided.',
+      'Doctor consultations are completely free for all campus students and staff.'
+    ],
+    featured: false
+  }
+];

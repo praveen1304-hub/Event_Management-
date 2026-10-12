@@ -1,0 +1,10 @@
+# Backend Running Commend
+cd backend
+Activate → venv\Scripts\activate
+Install → pip install -r requirements.txt
+Run → python run.py
+
+#FrontEnd Running Commend
+
+cd frontend
+npm run dev
